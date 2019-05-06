@@ -47,8 +47,7 @@ class MainActivity : AppCompatActivity() {
             object : SwipeHelper.UnderlayButtonClickListener {
               override fun onClick(pos: Int) {
                 adapter.list.removeAt(pos)
-                adapter.notifyItemRemoved(pos)
-                adapter.notifyItemRangeChanged(pos, adapter.itemCount)
+                adapter.notifyDataSetChanged()
               }
             }
           )
